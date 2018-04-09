@@ -36,5 +36,9 @@ func (r *credSyncer) Get(key string) (cred minio.CustomCredentials, errCode mini
 		errCode = minio.ErrInvalidAccessKeyID
 		return
 	}
+	if cred.Scope == "" {
+		cred = minio.CustomCredentials{}
+		errCode = minio.ErrAccessDenied
+	}
 	return
 }
