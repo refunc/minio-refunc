@@ -10,7 +10,7 @@ RUN  \
     apk add --no-cache --virtual .build-deps git && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-ENV MINIO_VERSION="RELEASE.2018-03-30T00-38-44Z-refunc-1"
+ENV MINIO_VERSION="RELEASE.2018-04-04T05-20-54Z-refunc-1"
 
 RUN \
     mkdir -p /go/src/github.com/minio && \
